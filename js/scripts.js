@@ -1,4 +1,4 @@
-/*  Copyright 2014 gokoururi
+/*  Based on gokoururi's one
     This work is free. You can redistribute it and/or modify it under the
     terms of the Do What The Fuck You Want To Public License, Version 2,
     as published by Sam Hocevar. See the COPYING file for more details. */
@@ -29,7 +29,7 @@ function removeMascot() {
 $(document).ready(function(event) {
     var mascotEnable    = true;
     var mascotPath      = "images/mascots/"
-    var mascotList      = [ 'ruri1.png', 'ruri2.png', 'ruri3.png' ];
+    var mascotList      = [ 'ruri1.png'/*, 'ruri2.png', 'ruri3.png' */]; //I only like the fisrt one.
 
     var mascot          = mascotPath + mascotList[Math.floor(Math.random() * mascotList.length)];
     var mascotMinWidth  = '750';

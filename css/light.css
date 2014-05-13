@@ -1,4 +1,4 @@
-/*  Copyright © 2014 gokoururi
+/*  Based on gokoururi's one
     This work is free. You can redistribute it and/or modify it under the
     terms of the Do What The Fuck You Want To Public License, Version 2,
     as published by Sam Hocevar. See the COPYING file for more details. */
@@ -113,6 +113,10 @@ h1 {
     opacity: 1;
 }
 
+.duckduckgo {
+    background-image: url('../images/duckduckgo-light.png');
+}
+
 .google {
     background-image: url('../images/google-light.png');
 }
@@ -214,7 +218,7 @@ body {
     background-color: #EFEFEF;
 }
 .highlite {
-    color: #FF9966;
+    color: #5d617e;
 }
 main {
     background-color: #F2F2F2;
@@ -229,22 +233,23 @@ main {
 .buttonGrey > a,
 .buttonGrey > ul > li > a {
     color: #FFF;
-    background: #CCC;
+    background: #ccc;
+    /*background: #5d617e; /*wallpaper purple*/
 }
 .buttonGrey > a:after {
     border-left-color: #FFF;
 }
 .buttonGrey:hover > a,
 .buttonGrey > ul > li > a:hover {
-    color: #FFDBB8;
-    background: #FF9966;
+    color: #FFf;
+    background: #5d617e;
 }
 .buttonGrey:hover > a,
 .buttonGrey:hover > ul {
-    border-color: #FF9966;
+    border-color: #5d617e;
 }
 .buttonGrey:hover > a:after {
-    border-left-color: #FFDBB8;
+    border-left-color: #FFf;
 }
 
 /* Green button */
