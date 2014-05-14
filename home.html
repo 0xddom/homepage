@@ -12,6 +12,17 @@
         <link rel="stylesheet" style="text/css" href="css/light.css" title="Eve2" />
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
+        <script type="text/javascript">
+            function gotourl(url) {
+                location.href = url;
+            }
+
+            function handlerequest() {
+                s = document.searchForm.q;
+                alert(s);
+                alert("hola");
+            }
+        </script>
     </head>
     <body>
         <main> <!-- Random mascot image will be set as background-image by javascript -->
@@ -20,7 +31,7 @@
                 <p class="subtitle">Its not like I like you or anything, baka.</p>
             </header>
             <section class="searchContainer">
-                <form class="searchForm" method="get" action="https://duckduckgo.com/">
+                <form class="searchForm" method="get" action="https://next.duckduckgo.com/">
                     <input class="searchBar duckduckgo" type="text" name="q" placeholder="DuckDuck Go" autofocus="autofocus" />
                 </form>
                 <form class="searchForm" method="get" action="https://youtube.com/results">
@@ -33,7 +44,7 @@
             <nav>
                 <ul class="buttonList">
                     <li class="button buttonGrey"><a href="http://github.com/KuroAku">Github</a></li>
-                    <li class="button buttonGrey"><a href="http://9gag.com">9gag</a></li>
+                    <li class="button buttonGrey"><a href="http://osu.ppy.sh/">Osu!</a></li>
                     <li class="button buttonGrey"><a href="http://volafile.io/r/BEEPi">Volafile</a></li>
                     <li class="button buttonGrey"><a href="https://translate.google.es/">Traductor</a></li>
                 </ul>
