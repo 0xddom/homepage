@@ -10,19 +10,13 @@
         <meta charset="utf-8">
         <link rel="icon" href="images/ruri.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon" />
         <link rel="stylesheet" style="text/css" href="css/light.css" title="Eve2" />
-        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="js/scripts.js"></script>
         <script type="text/javascript">
-            function gotourl(url) {
-                location.href = url;
-            }
-
-            function handlerequest() {
-                s = document.searchForm.q;
-                alert(s);
-                alert("hola");
-            }
+            var MUNDIAL_RANK = 0;
+            var NATIONAL_RANK = 0;
         </script>
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <!--<script type="text/javascript" src="http://kuroakuosuproxy.site40.net/osu_proxy.php"></script>-->
+        <script type="text/javascript" src="js/scripts.js"></script>
     </head>
     <body>
         <main> <!-- Random mascot image will be set as background-image by javascript -->
@@ -44,7 +38,13 @@
             <nav>
                 <ul class="buttonList">
                     <li class="button buttonGrey"><a href="http://github.com/KuroAku">Github</a></li>
-                    <li class="button buttonGrey"><a href="http://osu.ppy.sh/">Osu!</a></li>
+                    <li class="button buttonGrey">
+                        <a href="https://osu.ppy.sh/u/4070543">Osu!</a>
+                        <ul>
+                            <li><a id="rank">Rango</a></li>
+                            <li><a id="nrank">Rango nacional</a></li>
+                        </ul>
+                    </li>
                     <li class="button buttonGrey"><a href="http://volafile.io/r/BEEPi">Volafile</a></li>
                     <li class="button buttonGrey"><a href="https://translate.google.es/">Traductor</a></li>
                 </ul>
@@ -73,8 +73,6 @@
                             <li><a href="http://jkanime.net">JKAnime</a></li>
                             <li><a href="http://www.nyaa.se/">Nyaa</a></li>
                             <li><a href="https://jlist.com">JList</a></li>
-                            <!--li><a href="http://utw.me">UTW</a></li>
-                            <li><a href="http://mazuisubs.com">Mazui</a></li>-->
                         </ul>
                     </li>
                     <li class="button buttonGrey buttonArrow">
@@ -83,8 +81,6 @@
                             <li><a href="https://lainchan.org/">Lainchan</a></li>
                             <li><a href="http://hackaday.com/">Hach a Day</a></li>
                             <li><a href="https://thepiratebay.se/">Pirate bay</a></li>
-                            <!--li><a href="http://utw.me">UTW</a></li>
-                            <li><a href="http://mazuisubs.com">Mazui</a></li>-->
                         </ul>
                     </li>
                 </ul>
