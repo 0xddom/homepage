@@ -11,14 +11,27 @@
         <link rel="icon" href="images/ruri.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon" />
         <link rel="stylesheet" style="text/css" href="css/light.css" title="Eve2" />
         <script type="text/javascript">
+            // Globals
             var MUNDIAL_RANK = 0;
             var NATIONAL_RANK = 0;
+            var LAST_MASCOT = "";
+            var mascotEnable = true;
+            var mascotPath = "images/mascots/";
+            var mascotList = [
+                'lightruri3.png', 
+                'lightruri1.png', 
+                'ruri3.png', 
+                'ruri1.png', 
+                //'kurumi1.png', 
+                'ruri4.png', 
+                'ruri6.png'
+                ];
         </script>
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <!--<script type="text/javascript" src="http://kuroakuosuproxy.site40.net/osu_proxy.php"></script>-->
         <script type="text/javascript" src="js/scripts.js"></script>
     </head>
-    <body>
+    <body onload="window.setInterval('updateMascot()', 30000);">
         <main> <!-- Random mascot image will be set as background-image by javascript -->
             <header>
                 <h1>Welcome to the Internet, <span class="highlite">KuroAku-sama</span></h1>
@@ -38,14 +51,22 @@
             <nav>
                 <ul class="buttonList">
                     <li class="button buttonGrey"><a href="http://github.com/KuroAku">Github</a></li>
-                    <li class="button buttonGrey">
-                        <a href="https://osu.ppy.sh/u/4070543">Osu!</a>
+                    <li class="button buttonGrey buttonArrow">
+                        <a>Gaming</a>
                         <ul>
-                            <li><a id="rank">Rango</a></li>
-                            <li><a id="nrank">Rango nacional</a></li>
+                            <li><a href="https://osu.ppy.sh/u/4070543">Osu!</a></li>
+                            <li><a href="https://www.gensokyo.org">Gensokyo</a></li>
+                            <li><a href="https://mega.co.nz/#F!ikAxDKLK!KhLTsUCPooQFmyD3ITxJSg">Touhou games</a></li>
                         </ul>
                     </li>
-                    <li class="button buttonGrey"><a href="http://volafile.io/r/BEEPi">Volafile</a></li>
+                    <li class="button buttonGrey buttonArrow">
+                        <a>Dialy</a>
+                        <ul>
+                            <li><a href="http://volafile.io/r/BEEPi">Volafile</a></li>
+                            <li><a href="https://lainchan.org/">Lainchan</a></li>
+                            <li><a href="https://9gag.com">9gag</a></li>
+                        </ul>
+                    </li>
                     <li class="button buttonGrey"><a href="https://translate.google.es/">Traductor</a></li>
                 </ul>
                 <ul class="buttonList">
@@ -60,8 +81,6 @@
                     <li class="button buttonGrey buttonArrow">
                         <a href="http://4chan.org">4chan</a>
                         <ul>
-                            <!--<li><a href="http://boards.4chan.org/v/">Video Games</a></li>
-                            <li><a href="http://boards.4chan.org/vg/">Video Game General</a></li>-->
                             <li><a href="http://boards.4chan.org/g/">Technology</a></li>
                             <li><a href="http://boards.4chan.org/jp/">Otaku Culture</a></li>
                             <li><a href="http://boards.4chan.org/w/">Anime wallpaper</a></li>
@@ -72,15 +91,15 @@
                         <ul>
                             <li><a href="http://jkanime.net">JKAnime</a></li>
                             <li><a href="http://www.nyaa.se/">Nyaa</a></li>
-                            <li><a href="https://jlist.com">JList</a></li>
+                            <li><a href="https://jlist.com">JList</a></li>                           
                         </ul>
                     </li>
                     <li class="button buttonGrey buttonArrow">
                         <a>Tech</a>
                         <ul>
-                            <li><a href="https://lainchan.org/">Lainchan</a></li>
                             <li><a href="http://hackaday.com/">Hach a Day</a></li>
                             <li><a href="https://thepiratebay.se/">Pirate bay</a></li>
+                            <li><a href="https://www.hostinger.it">Hostinger</a></li>
                         </ul>
                     </li>
                 </ul>

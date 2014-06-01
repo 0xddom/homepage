@@ -39,12 +39,24 @@ function setOsuRank() {
     $("a#nrank").text(nrank_str);
 }
 
-$(document).ready(function(event) {
-    var mascotEnable    = true;
-    var mascotPath      = "images/mascots/"
-    var mascotList      = [ 'lightruri3.png'/*, 'ruri2.png', 'ruri3.png' */]; //I only like this one.
+function updateMascot() {
+    do {
+        var mascot = mascotPath + mascotList[Math.floor(Math.random() * mascotList.length)];
+    } while(LAST_MASCOT == mascot);
+    LAST_MASCOT = mascot;
+    var mascotMinWidth  = '750';
 
-    var mascot          = mascotPath + mascotList[Math.floor(Math.random() * mascotList.length)];
+    if ( mascotEnable ) { 
+        setMascot(mascot);
+        controlMascot(mascot, mascotMinWidth);
+    } else { removeMascot(); }
+}
+
+$(document).ready(function(event) {
+    do {
+        var mascot = mascotPath + mascotList[Math.floor(Math.random() * mascotList.length)];
+    } while(LAST_MASCOT == mascot);
+    LAST_MASCOT = mascot;
     var mascotMinWidth  = '750';
 
     if ( mascotEnable ) { 
