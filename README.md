@@ -18,7 +18,7 @@ Features:
 Customizing and adding mascots
 ----
 
-To customize mascots modify the following values in [javascript](js/scripts.js):
+To customize mascots modify the following values in [javascript](home.html):
 
 ```javascript
     var mascotEnable    = true;
