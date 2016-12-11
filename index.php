@@ -1,34 +1,42 @@
 <!DOCTYPE html> 
-<!--    Based on gokoururi's one
-        This work is free. You can redistribute it and/or modify it under the
+/*      This work is free. You can redistribute it and/or modify it under the
         terms of the Do What The Fuck You Want To Public License, Version 2,
-        as published by Sam Hocevar. See the COPYING file for more details. -->
+        as published by Sam Hocevar. See the COPYING file for more details. */
+<?php
+$css =  "light";
+
+$time = new DateTime('now');
+
+
+
+?>
+
 <html>
     <head>
         <title>Welcome Home</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta charset="utf-8">
         <link rel="icon" href="images/ruri.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon" />
-        <link rel="stylesheet" style="text/css" href="css/light.css" title="Eve2" />
+      <?php if($css === "light") { ?>
+        <link rel="stylesheet" style="text/css" href="css/light.css" />
+      <?php } else { ?>
+        <link rel="stylesheet" style="text/css" href="css/dark.css" />
+      <?php } ?>
         <script type="text/javascript">
             // Globals
-            var MUNDIAL_RANK = 0;
-            var NATIONAL_RANK = 0;
             var LAST_MASCOT = "";
             var mascotEnable = true;
             var mascotPath = "images/mascots/";
             var mascotList = [
-                'lightruri3.png', 
-                'lightruri1.png', 
-                'ruri3.png', 
-                'ruri1.png', 
-                //'kurumi1.png', 
-                'ruri4.png', 
+                'lightruri3.png',
+                'lightruri1.png',
+                'ruri3.png',
+                'ruri1.png',
+                'ruri4.png',
                 'ruri6.png'
                 ];
         </script>
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-        <!--<script type="text/javascript" src="http://kuroakuosuproxy.site40.net/osu_proxy.php"></script>-->
         <script type="text/javascript" src="js/scripts.js"></script>
     </head>
     <body onload="window.setInterval('updateMascot()', 30000);">
