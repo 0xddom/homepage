@@ -1,27 +1,21 @@
-<!DOCTYPE html> 
+<?php
 /*      This work is free. You can redistribute it and/or modify it under the
         terms of the Do What The Fuck You Want To Public License, Version 2,
         as published by Sam Hocevar. See the COPYING file for more details. */
-<?php
+
 $css =  "light";
-
-$time = new DateTime('now');
-
-
+$time = new DateTime("now");
 
 ?>
 
+<!DOCTYPE html> 
 <html>
     <head>
         <title>Welcome Home</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta charset="utf-8">
         <link rel="icon" href="images/ruri.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon" />
-      <?php if($css === "light") { ?>
-        <link rel="stylesheet" style="text/css" href="css/light.css" />
-      <?php } else { ?>
-        <link rel="stylesheet" style="text/css" href="css/dark.css" />
-      <?php } ?>
+        <link rel="stylesheet" style="text/css" href="css/<?= $css ?>.css" />
         <script type="text/javascript">
             // Globals
             var LAST_MASCOT = "";
