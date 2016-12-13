@@ -54,13 +54,11 @@ class Theme {
     }
 
     public function set_theme() {
-
-        if(defined(_GET['theme'])) {
+        if(array_key_exists('theme', $_GET)) {
             return $this->set_theme_from_get();
         } else {
             return $this->set_theme_from_daylight();
         }
     }
 }
-
 ?>

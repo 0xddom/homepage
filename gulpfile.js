@@ -81,7 +81,7 @@ gulp.task('dist-coffee', function() {
     gulp.src(coffee_path)
         .pipe(coffeeConcat('application.coffee'))
         .pipe(coffee({bare: false}))
-        .pipe(jsmin())
+        //.pipe(jsmin())
         .pipe(gulp.dest(js_dist));
 });
 

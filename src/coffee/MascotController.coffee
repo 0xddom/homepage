@@ -21,18 +21,15 @@ class MascotController
   setMascot: (mascot) ->
     if @mascotEnabled
       mascot.set()
-      @setWindowResizeHandler mascot
+      @setWindowResizeHandler mascot, @minWidth
     else
       mascot.unset()
 
-  mascotFits: ->
-    $(window).width() > @mascotMinWidth
-
-  setWindowResizeHandler: (mascot) ->
+  setWindowResizeHandler: (mascot, mascotMinWidth) ->
     $(window).resize (event) ->
-      if not @mascotFits() and $('main').hasClass 'mascot'
+      if $(window).width() <= mascotMinWidth and $('main').hasClass 'mascot'
         mascot.unset()
-      else if @mascotFits() and not $('main').hasClass 'mascot'
+      else if $(window).width() > mascotMinWidth and not $('main').hasClass 'mascot'
         mascot.set()
 
   chooseNewMascot: ->
