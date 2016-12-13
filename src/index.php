@@ -2,18 +2,8 @@
 /*      This work is free. You can redistribute it and/or modify it under the
         terms of the Do What The Fuck You Want To Public License, Version 2,
         as published by Sam Hocevar. See the COPYING file for more details. */
+require 'theme.php'
 
-
-$files = array_diff(scandir('./css'), array('.', '..'));
-$requested_theme = $_GET['theme'].'.css';
-$css; // Global css theme
-
-if(in_array($requested_theme, $files)) {
-    $css = $_GET['theme'];
-} else {
-    $css =  "light";
-    $time = new DateTime("now");
-}
 ?>
 
 <!DOCTYPE html> 
@@ -24,7 +14,7 @@ if(in_array($requested_theme, $files)) {
         <meta charset="utf-8">
         <link rel="icon" href="images/ruri.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon" />
         <link rel="stylesheet" style="text/css" href="css/common.css" />
-        <link rel="stylesheet" style="text/css" href="css/<?= $css ?>.css" />
+        <link rel="stylesheet" style="text/css" href="css/<?= (new Theme)->set_theme() ?>.css" />
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/application.js"></script>
     </head>
