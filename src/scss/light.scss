@@ -1,0 +1,227 @@
+/* Based on gokoururi's one
+  This work is free. You can redistribute it and/or modify it under the
+  terms of the Do What The Fuck You Want To Public License, Version 2,
+  as published by Sam Hocevar. See the COPYING file for more details. */
+
+// Colors
+
+// Grey scale
+$light-grey:   #aaaaaa;
+$white:        #ffffff;
+$pearl-grey:   #efefef;
+$white-grey:   #f2f2f2;
+$grey:         #cccccc;
+$medium-grey:  #dddddd;
+$dark-grey:    #888888;
+
+// Pink
+$pink:         #d67b96;
+$dark-pink:    #70293b; // This color name even exists? lol
+
+// Purple
+$purple:       #5d617e;
+$light-purple: #b9b6d9;
+
+// Green
+$white-green:  #daffd5;
+$light-green:  #9be391;
+$green:        #91b476;
+$pearl-green:  #eeffeb;
+$yellow-green: #91ff82;
+$dark-green:   #269926;
+$medium-green: #729a64;
+
+// Files
+$duckduckgo:   '../images/duckduckgo-light.png';
+$google:       '../images/google-light.png';
+$youtube:      '../images/youtube-light.png';
+$wikipedia:    '../images/wikipedia-light.jpg';
+
+// Configuration
+h1 {
+  color: $light-grey;
+  text-shadow: 0 1px $white;
+}
+
+.subtitle {
+  color: $light-grey;
+}
+
+.searchBar:hover {
+  box-shadow: 0 0 5px lightgrey;
+  border: 1px solid lightgrey;
+}
+
+.duckduckgo {
+  background-image: url($duckduckgo);
+}
+
+.google {
+  background-image: url($google);
+}
+
+.youtube {
+  background-image: url($youtube);
+}
+
+.wikipedia {
+  background-image: url($wikipedia);
+  background-size: 21px 21px;
+}
+
+/* Button configuration */
+
+.button > ul > li > a:hover {
+  color: $pink;
+  background: $dark-pink;
+}
+
+/* Colors */
+body {
+  background-color: $pearl-grey;
+}
+.highlite {
+  color: $purple;
+}
+main {
+  background-color: $white-grey;
+  border-color: $white;
+}
+
+/* Grey button */
+.buttonGrey > a,
+.buttonGrey > ul {
+  border-color: $white;
+}
+.buttonGrey > a,
+.buttonGrey > ul > li > a {
+  color: $white;
+  background: $grey;
+  /*background: $purple; /*wallpaper purple*/
+}
+.buttonGrey > a:after {
+  border-left-color: $white;
+}
+.buttonGrey:hover > a,
+.buttonGrey > ul > li > a:hover {
+  color: $white;
+  background: $purple;
+}
+.buttonGrey:hover > a,
+.buttonGrey:hover > ul {
+  border-color: $purple;
+}
+.buttonGrey:hover > a:after {
+  border-left-color: $white;
+}
+
+/* Green button */
+.buttonGreen > a,
+.buttonGreen > ul {
+  border-color: $white-green;
+}
+.buttonGreen > a,
+.buttonGreen > ul > li > a {
+  color: $white-green;
+  background: $light-green;
+}
+.buttonGreen > a:after {
+  border-left-color: $green;
+}
+.buttonGreen:hover > a,
+.buttonGreen > ul > li > a:hover {
+  color: $pearl-green;
+  background: $yellow-green;
+}
+.buttonGreen:hover > a,
+.buttonGreen:hover > ul {
+  border-color: $yellow-green;
+}
+.buttonGreen:hover > a:after {
+  border-left-color: $dark-green;
+}
+
+/* Row configuration */
+.columnList {
+  display: inline-block;
+}
+.column {
+  display: table-cell;
+  text-align: center;
+  height: 100%;
+  border-right: 1px solid $medium-grey;
+  padding: 0 10px;
+}
+
+.column:last-of-type {
+  border-right-width: 0;
+}
+.column > a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding-bottom: 4px;
+  font-size: 24px;
+  font-weight: bold;
+  transition: all 0.8s;
+}
+
+.column > ul > li {
+  margin-bottom: 3px;
+}
+
+.column > ul > li > a {
+  text-decoration: none;
+  vertical-align: middle;
+  font-weight: bold;
+  outline: 0;
+  transition: all 0.8s;
+}
+
+/* Row standard colors */
+.column > a,
+.column > ul > li:before {
+  color: $medium-grey;
+}
+.column > a {
+  text-shadow: 0 0.5px $white;
+}
+.column > ul > li > a {
+  color: $dark-grey;
+}
+
+/* Row purple highlite */
+.columnPurple:hover > a,
+.columnPurple:hover > ul > li:before {
+  color: $light-purple
+}
+.columnPurple:hover > a {
+  text-shadow: 0 0.5px $white;
+}
+.columnPurple > ul > li > a:hover {
+  color: $light-purple;
+}
+
+/* Row pink highlite */
+.columnPink:hover > a,
+.columnPink:hover > ul > li:before {
+  color: $pink;
+}
+.columnPink:hover > a {
+  text-shadow: 0 0.5px $white;
+}
+.columnPink > ul > li > a:hover {
+  color: $pink;
+}
+
+/* Row green highlite */
+.columnGreen:hover > a,
+.columnGreen:hover > ul > li:before {
+  color: $medium-green;
+}
+.columnGreen:hover > a {
+  text-shadow: 0 0.5px $white;
+}
+.columnGreen > ul > li > a:hover {
+  color: $green;
+}

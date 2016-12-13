@@ -1,0 +1,232 @@
+$black: rgba(0, 0, 0, 0);
+$dark-grey: rgba(100, 100, 100, 1);
+$lightgrey: #d3d3d3;
+
+html {
+  font-size: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  border: 0;
+  font-family: Tahoma;
+  font-size: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.mascot {
+  padding: 20px 20px 20px 250px;
+}
+
+.plain {
+  padding: 20px;
+}
+
+main {
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  font-size: 12px;
+  margin: 10vh 0 0;
+  min-width: 500px;
+}
+
+header {
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.search-container {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.search-form {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.search-bar::-webkit-input-placeholder {
+  color: $black;
+  transition: color 1s;
+}
+
+.search-bar {
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  border: 1px solid $lightgrey;
+  color: $black;
+  font-size: 10px;
+  height: 20px;
+  opacity: .5;
+  outline: 0;
+  padding: 0;
+  transition: all 1s;
+  width: 20px;
+}
+
+.search-bar:hover {
+  background-position: right center;
+  border: 1px solid;
+  box-shadow: 0 0 5px;
+  cursor: pointer;
+  opacity: 1;
+  transition: all .5s;
+}
+
+.search-bar:focus::-webkit-input-placeholder {
+  color: $dark-grey;
+}
+
+.search-bar:focus {
+  color: $dark-grey;
+  cursor: text;
+  opacity: 1;
+  padding: 0 25px 0 5px;
+  width: 100px;
+}
+
+nav {
+  text-align: center;
+}
+
+.column-list,
+.column-list ul,
+.button-list,
+.button-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.button {
+  display: inline-block;
+  margin: 5px 10px;
+  position: relative;
+}
+
+.button > a {
+  border-style: solid;
+  border-width: 2px;
+  display: inline-block;
+  font-size: 18px;
+  min-width: 140px;
+  outline: none;
+  padding: 10px 5px;
+  text-decoration: none;
+  transition: all 1s;
+}
+
+.button-arrow > a::after {
+  border-bottom-color: transparent;
+  border-bottom-width: 5px;
+  border-left-width: 5px;
+  border-right-width: 0;
+  border-style: solid;
+  border-top-color: transparent;
+  border-top-width: 5px;
+  content: '';
+  float: right;
+  font-size: 0;
+  height: 0;
+  margin: 8px 10px 0 8px;
+  transition: all 1s;
+  width: 0;
+}
+
+.button-arrow:hover > a::after {
+  transform: rotate(90deg);
+  transition: transform .5s, border 1s;
+}
+
+.button > ul {
+  border-style: solid;
+  border-width: 0;
+  box-sizing: border-box;
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  transition: all 1s;
+  width: 100%;
+  z-index: 10;
+}
+
+.button:hover > ul {
+  border-style: solid;
+  border-width: 1px;
+  max-height: 200px;
+  transition: max-height .5s, border 1s;
+}
+
+.button > ul > li {
+  display: block;
+}
+
+.button > ul > li > a {
+  display: inline-block;
+  outline: 0;
+  padding: 5px 0;
+  text-decoration: none;
+  transition: all 1s;
+  width: 100%;
+}
+
+.column-list {
+  display: inline-block;
+}
+
+.column {
+  border-right: 1px solid;
+  display: table-cell;
+  height: 100%;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.column:last-of-type {
+  border-right-width: 0;
+}
+
+.column > a {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 4px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .8s;
+}
+
+.column > ul > li {
+  margin-bottom: 3px;
+}
+
+.column > ul > li > a {
+  font-weight: bold;
+  outline: 0;
+  text-decoration: none;
+  transition: all .8s;
+  vertical-align: middle;
+}
