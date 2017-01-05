@@ -39,15 +39,15 @@ class Theme {
         }
     }
 
-    function is_night($time, $sunset) {
-        return $sunset <= $time/* && $time < $sunrise*/;
+    function is_night($time, $sunset, $sunrise) {
+        return $sunset <= $time || $time < $sunrise;
     }
 
     function set_theme_from_daylight() {
         $css =  "light";
         $time = getdate()[0];
 
-        if($this->is_night($time, $this->get_sunset($time)))
+        if($this->is_night($time, $this->get_sunset($time), $this->get_sunrise($time)))
             $css = 'dark';
 
         return $css;
@@ -61,4 +61,5 @@ class Theme {
         }
     }
 }
+
 ?>
