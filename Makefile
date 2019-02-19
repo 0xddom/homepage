@@ -1,9 +1,10 @@
-.PHONY: clean deploy build
-deploy: build
-	update_homepage
+.PHONY: clean install build
 
 build:
 	gulp
+
+install: build
+	$(CHROME) --load-extension=`pwd`/dist
 
 clean:
 	rm -rf dist/*
