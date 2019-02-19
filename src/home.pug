@@ -1,0 +1,79 @@
+mixin theme(name)
+	link(rel="icon"
+		 href="themes/" + name + "/favicon.ico"
+		 sizes="16x16 32x32 48x48 64x64" 
+		 type="image/vnd.microsoft.icon")
+	link(rel="stylesheet" style="text/css"
+	     href="themes/" + name + "/colors.css")
+	script(type="text/javascript"
+		   src="themes/" + name + "/mascots.js")
+
+mixin searchForm(name, autofocus)
+	- let searchBar = searchBars[name]
+	form.searchForm(method=searchBar.method
+					action=searchBar.action)
+		if autofocus
+			input.searchBar(class="search_" + name
+						type="text"
+						name=searchBar.param
+						placeholder=searchBar.placeholder
+						autofocus)
+		else
+			input.searchBar(class="search_" + name
+						type="text"
+						name=searchBar.param
+						placeholder=searchBar.placeholder)
+
+mixin button(c)
+	if c.type == "button"
+		li.button(class="button_" + c.color)
+			a(href=c.url)= c.name
+	else if c.type == "list"
+		li.button(class="buttonArrow button_" + c.color)
+			a(href=c.url ? c.url : "#")= c.name
+			ul
+				each row in c.elements
+					li
+						a(href=row.url)= row.name
+
+mixin column(c)
+	li.column(class="column_" + c.color)
+		a(href=c.url ? c.url : "#")= c.name
+		ul
+			each e in c.elements
+				li
+					a(href=e.url)= e.name
+
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Welcome Home
+
+		link(rel="stylesheet" style="text/css" href="css/general.css")
+
+		+theme(config.theme)
+
+		script(type="text/javascript" src="js/jquery-2.1.1.min.js")
+		script(type="text/javascript" src="js/mascots-control.js")
+	body
+		main
+			header
+				h1 Welcome to the Internet,
+					span.name-highlight Goshujin-sama
+				p.subtitle It's not like I like you or anything, baka.
+			section.searchContainer
+				- let autofocus = true
+				each search in config['search-bars']
+					+searchForm(search, autofoucs)
+					- autofocus = false
+			nav
+				each row in config['buttons-layout']
+					ul.buttonList
+						each col in row
+							+button(col)
+				each row in config['columns-layout']
+					ul.columnList
+						each col in row
+							+column(col)
+

@@ -28,6 +28,7 @@
   "dependencies": {
     "coffee-script": "^1.12.1",
     "gulp-coffee": "^2.3.3",
-    "gulp-phplint": "^0.3.2"
+    "gulp-phplint": "^0.9.0",
+    "gulp-pug": "^4.0.1"
   }
 }

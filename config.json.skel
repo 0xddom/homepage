@@ -1,0 +1,113 @@
+{
+	"search-bars": [
+		"google",
+		"youtube",
+		"wikipedia"
+	],
+	"theme": "ruri-dark",
+	"buttons-layout": [
+		[
+			{
+				"name": "Github",
+				"type": "button",
+				"color": "green",
+				"url": "http://github.com/gokoururi/homepage"
+			},
+			{
+				"name": "Gelbooru",
+				"type": "button",
+				"color": "grey",
+				"url": "#"
+			},
+			{
+				"name": "Duke of Earl",
+				"type": "list",
+				"color": "grey",
+				"elements": [
+					{
+						"name": "When I hold you",
+						"url": "#"
+					},
+					{
+						"name": "In my Arms",
+						"url": "#"
+					},
+					{
+						"name": "You are my duchess",
+						"url": "#"
+					},
+					{
+						"name": "Of earl",
+						"url": "#"
+					}
+				]
+			}
+		]
+	],
+	"columns-layout": [
+		[
+			{
+				"name": "Resources",
+				"color": "purple",
+				"elements": [
+					{
+						"name": "Cute 2D Girls",
+						"url": "https://drive.google.com/folderview?id=0B_VmbVyD4eT3N1VUbGN4Wjd5OVE"
+					},
+					{
+						"name": "MDN",
+						"url": "https://developer.mozilla.org//"
+					},
+					{
+						"name": "Install Gentoo",
+						"url": "https://wiki.installgentoo.com/"
+					}
+				]
+			},
+			{
+				"name": "4chon",
+				"color": "green",
+				"elements": [
+					{
+						"name": "Video Games",
+						"url": "http://boards.4chan.org/v/"
+					},
+					{
+						"name": "Video Game General",
+						"url": "http://boards.4chan.org/vg/"
+					},
+					{
+						"name": "Technology",
+						"url": "http://boards.4chan.org/g/"
+					},
+					{
+						"name": "Otaku Culture",
+						"url": "http://boards.4chan.org/jp/"
+					}
+				]
+			},
+			{
+				"name": "Animution",
+				"color": "pink",
+				"elements": [
+					{
+						"name": "Bakabt",
+						"url": "http://bakabt.me"
+					},
+					{
+						"name": "Nyaa",
+						"url": "http://www.nyaa.se/"
+					},
+					{
+						"name": "UTW",
+						"url": "http://utw.me"
+					},
+					{
+						"name": "Mazui",
+						"url": "http://mazuisubs.com"
+					}
+				]
+			}
+		]
+	]
+}

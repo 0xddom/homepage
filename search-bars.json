@@ -1,0 +1,26 @@
+{
+	"duckduckgo": {
+		"method": "get",
+		"action": "https://next.duckduckgo.com/",
+		"param": "q",
+		"placeholder": "DuckDuck Go"
+	},
+	"youtube": {
+		"method": "get",
+		"action": "https://youtube.com/results",
+		"param": "search_query",
+		"placeholder": "Youtube"
+	},
+	"wikipedia": {
+		"method": "get",
+		"action": "https://es.wikipedia.org/w/index.php",
+		"param": "search",
+		"placeholder": "Wikipedia (es)"
+	},
+	"google": {
+		"method": "get",
+		"action": "https://google.com/search",
+		"param": "q",
+		"placeholder": "Google"
+	}
+}

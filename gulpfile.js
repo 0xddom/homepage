@@ -1,23 +1,32 @@
-var gulp = require ('gulp');
-var csslint = require ('gulp-csslint');
-var eslint = require('gulp-eslint');
-var jsmin = require('gulp-jsmin');
-var phplint = require('gulp-phplint');
+const gulp = require ('gulp');
+const csslint = require ('gulp-csslint');
+const eslint = require('gulp-eslint');
+const jsmin = require('gulp-jsmin');
+const phplint = require('gulp-phplint');
 const sass = require('gulp-ruby-sass');
-var uglifycss = require('gulp-uglifycss');
-var scsslint = require('gulp-scss-lint');
+const uglifycss = require('gulp-uglifycss');
+const scsslint = require('gulp-scss-lint');
+const pug = require('gulp-pug');
 
-var css_path = 'src/css/**/*.css';
-var js_path = 'src/js/**/*.js';
-var html_path = 'src/**/*.html';
-var scss_path = 'src/scss/**/*.scss';
-var dist = 'dist';
-var js_dist = 'dist/js';
-var css_dist = 'dist/css';
-var img_dist = 'dist/images';
-var manifest = 'manifest.json';
-var themes = 'src/themes/**/*';
-var themes_dist = 'dist/themes';
+const css_path = 'src/css/**/*.css';
+const js_path = 'src/js/**/*.js';
+const html_path = 'src/**/*.html';
+const pug_path = 'src/**/*.pug';
+const scss_path = 'src/scss/**/*.scss';
+const dist = 'dist';
+const js_dist = 'dist/js';
+const css_dist = 'dist/css';
+const img_dist = 'dist/images';
+const manifest = 'manifest.json';
+const themes = 'src/themes/**/*';
+const themes_dist = 'dist/themes';
+
+const pug_cfg = {
+    locals: {
+        searchBars: require('./search-bars.json'),
+        config: require('./config.json')
+    }
+};
 
 gulp.task('css-lint', function() {
     gulp.src(css_path)
@@ -71,11 +80,17 @@ gulp.task('dist-html', function() {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('dist-pug', function() {
+    gulp.src(pug_path)
+        .pipe(pug(pug_cfg))
+        .pipe(gulp.dest('dist'));
+})
+
 gulp.task('dist-libs', function() {
     gulp.src(libs_path)
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('dist', ['dist-js', 'dist-css', 'dist-html', 'dist-manifest', 'dist-themes']);
+gulp.task('dist', ['dist-js', 'dist-css', 'dist-html', 'dist-pug', 'dist-manifest', 'dist-themes']);
 
 gulp.task('default', ['dist']);
