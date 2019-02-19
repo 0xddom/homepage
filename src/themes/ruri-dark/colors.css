@@ -51,6 +51,10 @@ h1 {
 .search_google {
     background-image: url('images/icons/google.png');
 }
+
+.search_duckduckgo {
+    background-image: url('images/icons/duckduckgo.png');
+}
 .search_youtube {
     background-image: url('images/icons/youtube.png');
 }
